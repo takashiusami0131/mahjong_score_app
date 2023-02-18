@@ -1,6 +1,9 @@
+/* メイン画面 */
 .wrapper {
   display: flex;
 }
+
+/* 左側 */
 .side-bar {
   background-color: forestgreen;
   width: 300px;
@@ -20,6 +23,8 @@
   color: #FAFAFA;
   text-decoration: none;
 }
+
+/* 右側 */
 .rooms {
   background-color: green;
   height: calc(100vh - 100px);
