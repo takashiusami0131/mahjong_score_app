@@ -3,7 +3,7 @@ mahjong score app
 # アプリケーション概要
 麻雀の成績を管理できる
 # URL
-
+https://mahjong-score-app.onrender.com
 # テスト用アカウント
 メールアドレス：test@test
 パスワード :test123

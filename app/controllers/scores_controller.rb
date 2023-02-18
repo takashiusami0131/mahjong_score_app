@@ -1,4 +1,4 @@
 class ScoresController < ApplicationController
-  def index
+  def index 
   end
 end
