@@ -1,8 +1,33 @@
 <div class="side-bar-header">
 <div class="header-name">
-    <a href="#">MAHJONG_SCORE_APP</a>
+    <a href = "/" >MAHJONG_SCORE_APP</a>
   </div>
 </div>
 
 <div class="rooms">
+  <div class="form">
+      <%= form_with model: @score, local: true do |f| %>
+        東 
+        <%= f.collection_select(:user_id1, User.all , :id, :name, {}, {class:"select-box", id:"user.id"}) %>
+          <div class="form-input">
+            <%= f.text_field :point1, class: 'form-message', placeholder: '点数を入力' %> 
+          </div> 
+        南 
+        <%= f.collection_select(:user_id2, User.all , :id, :name, {}, {class:"select-box", id:"user.id"}) %>
+        <div class="form-input">
+            <%= f.text_field :point2, class: 'form-message', placeholder: '点数を入力' %> 
+          </div> 
+        西 
+        <%= f.collection_select(:user_id3, User.all , :id, :name, {}, {class:"select-box", id:"user.id"}) %>
+        <div class="form-input">
+            <%= f.text_field :point3, class: 'form-message', placeholder: '点数を入力' %> 
+          </div> 
+        北 
+        <%= f.collection_select(:user_id4, User.all , :id, :name, {}, {class:"select-box", id:"user.id"}) %>
+        <div class="form-input">
+            <%= f.text_field :point4, class: 'form-message', placeholder: '点数を入力' %> 
+          </div> 
+      <%= f.submit '送信', class: 'form-submit' %> 
+      <% end %> 
+  </div>
 </div>
