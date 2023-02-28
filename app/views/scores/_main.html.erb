@@ -1,16 +1,22 @@
 <div class="score-header">
   <div class="left-header">
+    <div class="header-title">
+    ユーザー名：
+      <%= link_to current_user.name, edit_user_path(current_user) %>
     </div>
   </div>
   <div class="right-header">
     <div class="header-button">
-      <a href="#">ログアウト</a>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn' %> 
     </div>
   </div>
 </div>
 
 <div class="scores">
-</div>
-
-<div class="form">
+ <table border="1">
+    <tr>
+      <th></th>
+      <th><%= @score.user.name %></th>
+    </tr>
+  </table>
 </div>
